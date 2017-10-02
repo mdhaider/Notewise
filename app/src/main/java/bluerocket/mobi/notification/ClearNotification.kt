@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.NotificationCompat
 import bluerocket.mobi.R
-import bluerocket.mobi.ui.home.MainActivity
+import bluerocket.mobi.home.MainActivity
 import bluerocket.mobi.utils.logd
 
 /**
