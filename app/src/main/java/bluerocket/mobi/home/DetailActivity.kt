@@ -70,7 +70,7 @@ class DetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     var initDate: Date? = null
 
     val actionDone: FloatingActionButton by lazy {
-        val v:FloatingActionButton = findViewById(R.id.action_done)
+        val v = findViewById(R.id.action_done) as FloatingActionButton
         v.setImageDrawable(
                 GoogleMaterial.Icon.gmd_done.colorResOf(R.color.redPrimary)
         )
@@ -78,7 +78,7 @@ class DetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     val actionDelete: FloatingActionButton by lazy {
-        val v:FloatingActionButton = findViewById(R.id.action_delete)
+        val v = findViewById(R.id.action_delete) as FloatingActionButton
         v.setImageDrawable(
                 GoogleMaterial.Icon.gmd_delete.colorOf(Color.WHITE)
         )
@@ -86,35 +86,35 @@ class DetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     val txtTitle: TextView by lazy {
-        findViewById<TextView>(R.id.txt_title)
+        findViewById(R.id.txt_title) as TextView
     }
 
     val editTitle: EditText by lazy {
-        findViewById<EditText>(R.id.edit_title)
+        findViewById(R.id.edit_title) as EditText
     }
 
     val editContent: EditText by lazy {
-        findViewById<EditText>(R.id.txt_content)
+        findViewById(R.id.txt_content) as EditText
     }
 
     val addReminder: FloatingActionButton by lazy {
-        findViewById<FloatingActionButton>(R.id.fab_add_reminder)
+        findViewById(R.id.fab_add_reminder) as FloatingActionButton
     }
 
     val txtReminder: TextView by lazy {
-        findViewById<TextView>(R.id.txt_reminder)
+        findViewById(R.id.txt_reminder) as TextView
     }
 
     val colorPicker: ColorPicker by lazy {
-        findViewById<ColorPicker>(R.id.color_picker)
+        findViewById(R.id.color_picker) as ColorPicker
     }
 
     val txtGroup : TextView by lazy {
-        findViewById<TextView>(R.id.txt_group)
+        findViewById(R.id.txt_group) as TextView
     }
 
     val delReminder: View by lazy {
-        val v = findViewById<View>(R.id.reminder_del)
+        val v = findViewById(R.id.reminder_del)
         v.setOnClickListener {
             cancelPickTime()
         }

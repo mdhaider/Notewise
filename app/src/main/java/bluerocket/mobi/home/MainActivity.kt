@@ -19,6 +19,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import bluerocket.mobi.R
+import bluerocket.mobi.helper.ItemTouchHelperAdapter
+import bluerocket.mobi.helper.ItemTouchHelperViewHolder
+import bluerocket.mobi.helper.OnStartDragListener
+import bluerocket.mobi.helper.SimpleItemTouchHelperCallback
 import bluerocket.mobi.model.Thing
 import bluerocket.mobi.model.ThingGroup
 import bluerocket.mobi.model.ThingsManager
@@ -27,20 +31,15 @@ import bluerocket.mobi.notification.ClearNotification
 import bluerocket.mobi.settings.Settings
 import bluerocket.mobi.settings.Theme
 import bluerocket.mobi.sounds.Sound
-import bluerocket.mobi.ui.home.DetailActivity
-import bluerocket.mobi.ui.home.GroupEditorActivity
 import bluerocket.mobi.utils.*
 import bluerocket.mobi.widget.*
-import co.paulburke.android.itemtouchhelperdemo.helper.ItemTouchHelperAdapter
-import co.paulburke.android.itemtouchhelperdemo.helper.ItemTouchHelperViewHolder
-import co.paulburke.android.itemtouchhelperdemo.helper.OnStartDragListener
-import co.paulburke.android.itemtouchhelperdemo.helper.SimpleItemTouchHelperCallback
 import com.daimajia.swipe.SwipeLayout
 import com.github.clans.fab.FloatingActionButton
 import com.mikepenz.google_material_typeface_library.GoogleMaterial
 import com.nineoldandroids.animation.Animator
 import com.nineoldandroids.animation.ObjectAnimator
 import java.util.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), OnStartDragListener {
 

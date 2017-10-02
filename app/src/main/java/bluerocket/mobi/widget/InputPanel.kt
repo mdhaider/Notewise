@@ -9,18 +9,18 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import bluerocket.mobi.R
+import bluerocket.mobi.home.GroupEditorActivity
+import bluerocket.mobi.home.MainActivity
+import bluerocket.mobi.model.ThingGroup
+import bluerocket.mobi.model.ThingsManager
+import bluerocket.mobi.settings.Settings
+import bluerocket.mobi.utils.*
 import com.github.clans.fab.FloatingActionButton
 import com.mikepenz.google_material_typeface_library.GoogleMaterial
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog
-import bluerocket.mobi.R
-import bluerocket.mobi.model.ThingGroup
-import bluerocket.mobi.model.ThingsManager
-import bluerocket.mobi.settings.Settings
-import bluerocket.mobi.ui.home.GroupEditorActivity
-import bluerocket.mobi.ui.home.MainActivity
-import bluerocket.mobi.utils.*
 import io.codetail.widget.RevealFrameLayout
 import java.util.*
 
