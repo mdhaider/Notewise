@@ -10,8 +10,6 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.jakewharton.processphoenix.ProcessPhoenix
-import com.mikepenz.google_material_typeface_library.GoogleMaterial
 import bluerocket.mobi.R
 import bluerocket.mobi.backup.Backup
 import bluerocket.mobi.backup.BackupHelper
@@ -22,6 +20,8 @@ import bluerocket.mobi.settings.Theme
 import bluerocket.mobi.utils.*
 import bluerocket.mobi.widget.FontSizeBar
 import bluerocket.mobi.widget.TitleLayout
+import com.jakewharton.processphoenix.ProcessPhoenix
+import com.mikepenz.google_material_typeface_library.GoogleMaterial
 import java.io.File
 
 /**
@@ -72,6 +72,14 @@ class SettingActivity : AppCompatActivity() {
 
     val initTheme: Theme = Settings.theme
 
+    val mFabSetting: ImageView by lazy {
+        findViewById(R.id.backArrow) as ImageView
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+
     fun updateGroupName(id: Long) {
         if (id == ThingGroup.SHOW_ALL_GROUP_ID) {
             txtGroup.text = R.string.group_all.toResString(this)
@@ -88,7 +96,6 @@ class SettingActivity : AppCompatActivity() {
         inputPanel.title = resources.getString(R.string.setting)
         inputPanel.txtCount.visibility = View.GONE
 
-        (findViewById(R.id.txt_copyright) as TextView).typeface = fontRailway
         (findViewById(R.id.txt_theme_title) as TextView).typeface = fontRailway
         txtSoundOnOff.typeface = fontRailway
         (findViewById(R.id.txt_sound_title) as TextView).typeface = fontRailway
@@ -103,6 +110,11 @@ class SettingActivity : AppCompatActivity() {
 
         txtBackup.setOnClickListener {
             onBackupClick()
+        }
+
+        mFabSetting.setOnClickListener {
+            onBackPressed()
+
         }
 
         imgThemeColorSelected.setImageDrawable(
@@ -328,5 +340,7 @@ class SettingActivity : AppCompatActivity() {
             }
         }
     }
+
+
 
 }

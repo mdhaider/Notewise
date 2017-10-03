@@ -1,71 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-        <include
-            android:id="@+id/header"
-            layout="@layout/setting_title_layout"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.3dp"
-        android:background="@color/cardview_dark_background"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_group"
+           android:layout_weight="0.3"/>
+
+       <TextView
+           android:id="@+id/txt_edit_group"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:text="@string/edit_group"
+           android:layout_weight="1"
+           android:textColor="@color/greyPrimary"
+           android:textSize="@dimen/txt_size_large"
+           />
+
+       <TextView
+           android:id="@+id/txt_group"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="16dp"
+           android:layout_weight="1"
+           android:ellipsize="end"
+           android:maxLines="1"
+           android:text="Default"
+           android:textColor="@color/greyPrimary"
+           android:textSize="@dimen/txt_size_large"
+           android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"/>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+   </LinearLayout>
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_group"
-            android:layout_weight="0.3"/>
-
-        <TextView
-            android:id="@+id/txt_edit_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="@string/edit_group"
-            android:layout_weight="1"
-            android:textColor="@color/greyPrimary"
-            android:textSize="@dimen/txt_size_large"
-            />
-
-        <TextView
-            android:id="@+id/txt_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="Default"
-            android:textColor="@color/greyPrimary"
-            android:textSize="@dimen/txt_size_large"
-            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"/>
-
-
-    </LinearLayout>
-
-    <View
+    <view
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/cardview_dark_background"
@@ -80,12 +57,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_group"
             android:layout_weight="0.3"/>
-        <TextView
-            android:id="@+id/txt_theme_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Theme"
-            />
 
         <FrameLayout
             android:id="@+id/theme_color_container"
@@ -144,7 +115,7 @@
 
     </LinearLayout>
 
-    <View
+    <view
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/cardview_dark_background"
@@ -182,7 +153,7 @@
 
     </LinearLayout>
 
-    <View
+    <view
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/cardview_dark_background"
@@ -229,7 +200,7 @@
 
     </LinearLayout>
 
-    <View
+    <view
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/cardview_dark_background"
@@ -273,29 +244,19 @@
             />
 
         <TextView
-            android:id="@+id/rate_app"
-            android:layout_width="match_parent"
+            android:id="@+id/txt_copyright"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/setting_rate_app"
+            android:layout_marginBottom="10dp"
+            android:text="Blue Rocket Mobile Solutions 2017"
             android:textColor="@color/greyPrimary"
-            android:textSize="@dimen/txt_size_large"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:textSize="@dimen/txt_size_small"
             />
 
-        <TextView
-            android:id="@+id/feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_feedback"
-            android:textColor="@color/greyPrimary"
-            android:textSize="@dimen/txt_size_large"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            />
+
 
     </LinearLayout>
-    </LinearLayout>
+
+
 
 </LinearLayout>
-</ScrollView>

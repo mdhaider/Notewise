@@ -8,7 +8,7 @@ import bluerocket.mobi.utils.bg
 import bluerocket.mobi.widget.FontSizeBar
 
 /**
- * Created by air on 15/10/18.
+ * Created by mdhaider on 10/03/17.
  */
 
 enum class Theme(val value: Int) {

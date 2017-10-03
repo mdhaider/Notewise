@@ -215,7 +215,6 @@ class MainActivity : AppCompatActivity(), OnStartDragListener {
 
         mFabSetting.setOnClickListener {
             var bundle: Bundle? = null
-
             try {
                 bundle = ActivityOptions.makeSceneTransitionAnimation(this@MainActivity, mFabSetting, "st").toBundle()
             } catch(e: Exception) {
@@ -638,6 +637,7 @@ class MainActivity : AppCompatActivity(), OnStartDragListener {
             return thisColor
         }
     }
+
 
     inner class ThingsAdapter(val dragListener: OnStartDragListener) : RecyclerView.Adapter<VH>(), ItemTouchHelperAdapter {
 

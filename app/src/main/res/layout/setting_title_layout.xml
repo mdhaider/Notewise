@@ -4,17 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_thick"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="5dp"/>
+
     <com.github.clans.fab.FloatingActionButton
         android:id="@+id/fab_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         app:fab_colorNormal="@color/whitePrimary"
         app:fab_colorPressed="@color/whitePressed"
         app:fab_colorRipple="@color/whiteRipple"
         app:fab_elevationCompat="0dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="35dp"
         android:transitionName="st"
         app:fab_shadowRadius="0dp" />
 
@@ -24,11 +33,10 @@
         android:layout_height="match_parent"
         android:layout_toRightOf="@id/fab_setting"
         android:background="?attr/selectableItemBackground"
-        android:clickable="true"
         android:ellipsize="end"
         android:gravity="left|center_vertical"
         android:maxWidth="240dp"
-        android:padding="8dp"
+        android:padding="5dp"
         android:singleLine="true"
         android:text="List"
         android:textColor="@color/textTitle"
